@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Chat Feature
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+The Chat Feature is a real-time messaging interface for a React application. It allows users to log in using a nickname, view their message history, and start new chats with other users. The application checks for existing users based on their nickname and provides a seamless messaging experience.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- User login with nickname
+- View and manage message threads
+- Initiate new chats with other users
+- Real-time message display
+- User search and selection
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Prerequisites
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js and npm installed
+- A backend API to handle chat functionality (threads and messages)
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Follow these steps to set up and run the chat feature:
 
-### `npm run build`
+### 1. Clone the Repository
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+First, clone the repository to your local machine:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+git clone <repository-url>
+cd <repository-directory>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 2. Install dependency
 
-### `npm run eject`
+npm install
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### 3. Start the Development Server
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+npm start
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+The application will be available at http://localhost:3000 by default.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Logging In
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+When the application starts, you'll be presented with the login page where you need to enter a nickname:
 
-### Code Splitting
+- **If the user exists**: The chat interface will load, showing the user's message history and threads.
+- **If the user does not exist**: A new user will be created, and the chat interface will be initialized.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Chat Interface
 
-### Analyzing the Bundle Size
+- **Threads List**: Displays all existing chat threads. Click on a thread to view the message history.
+- **New Chat**: Click the "New Chat" button to open a modal where you can search for users and start a new chat.
+  - **Search Users**: Enter a search query to find users. Select a user to initiate a chat.
+- **Messages**: View and send messages in the selected thread. Messages you send appear on the right, while messages from others are shown on the left.
+- **Logout**: Click the logout button to end your session and return to the login page.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### User Modal
 
-### Making a Progressive Web App
+- **Search Users**: Use the search input to find users by name.
+- **Close Modal**: Click the close button or outside the modal area to close the user modal.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
